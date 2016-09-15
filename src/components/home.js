@@ -1,5 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
+import {getPokemans} from '../../src/actions/index';
 
 
 class Home extends React.Component {
@@ -13,4 +14,10 @@ class Home extends React.Component {
     }
 }
 
-export default connect(null,null)(Home);
+function mapStateToProps(state) {
+    return {
+        pokemans: state.pokemans
+    }
+}
+
+export default connect(mapStateToProps, {getPokemans})(Home);
