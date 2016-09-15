@@ -1,0 +1,7 @@
+a[disabled] {
+    pointer-events: none;
+}
+
+.btnRow {
+    margin: 10px 0;
+}
