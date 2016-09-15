@@ -7,6 +7,7 @@ export function getPokemans(page) {
     const offset = 20*(page-1);
     const url = `${ROOT_URL}pokemon/?offset=${offset}`;
     const request = axios.get(url);
+    // console.log('requested url= ' + url);
 
     return {
         type: GET_POKEMANS,
